@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Movie List</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+</head>
+
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  
+  <section class="hero-section">
+    <div class="card-grid">
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/81vSAXLcU-L._AC_SY679_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Apocalypse Now - 1979 Francis Ford</p>
+          <h3 class="card__heading"></h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/51PjvlsRHtL._AC_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </li>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://dyn1.heritagestatic.com/lf?set=path%5B7%2F7%2F2%2F772911%5D&call=url%5Bfile%3Aproduct.chain%5D)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://www.camdenconference.org/wp-content/uploads/2016/10/p35240_p_v8_aa.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/50afab111775125.600837979c4e1.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://www.themoviedb.org/t/p/original/d1VEnsFO7YcEc5gRqKXu2Bq2MMJ.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2016/04/hyland_fury.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4150e516-3db3-42b5-9652-0b408c9aefd0/d5i3isk-f94c81a9-e332-4a66-9ad5-e98bcd8906c4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQxNTBlNTE2LTNkYjMtNDJiNS05NjUyLTBiNDA4YzlhZWZkMFwvZDVpM2lzay1mOTRjODFhOS1lMzMyLTRhNjYtOWFkNS1lOThiY2Q4OTA2YzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wgacrvQFHK4oSmeC37GA8LV1BuQh7Q4j-AgWI3sARdg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/adb866128547679.617d70de544f9.png)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73714313909969.5627a23056e35.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://www.brego.net/wp-content/uploads/2009/07/the-road-poster-usa-scape.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://cdn.shopify.com/s/files/1/1416/8662/products/fargo_1996_original_film_art_14fcd3fc-0b6c-408c-b128-bd653787dce6.jpg?v=1638320678)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/1d49c522596597.563155264c9c6.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2020/07/James-H-Neal_DEPARTED.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/originals/6b/47/d2/6b47d278f6879eaa38b391a6c465f33b.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.ebayimg.com/images/g/bc0AAOSwpJhfFlMY/s-l400.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/6285100/r/il/49d503/2435521859/il_570xN.2435521859_jupb.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://cdn.posteritati.com/posters/000/000/040/831/breaker-morant-md-web.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://live.staticflickr.com/3415/3554997602_c195792b29_c.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/originals/c7/a4/3a/c7a43a9bebc86484dcc41c549324f1b5.png)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/23402008/r/il/6b0fcf/2374286939/il_570xN.2374286939_317x.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/6285100/r/il/fe6ca5/358057821/il_570xN.358057821_t4dc.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/no461-my-good-will-hunting-minimal-movie-poster-chungkong-art.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/70434815300195.5628f5065b4bd.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/71aUk31E66L._AC_SL1000_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/M/MV5BMDIzODcyY2EtMmY2MC00ZWVlLTgwMzAtMjQwOWUyNmJjNTYyXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://dyn1.heritagestatic.com/lf?set=path%5B1%2F3%2F0%2F2%2F1302816%5D&call=url%5Bfile%3Aproduct.chain%5D)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/564x/be/0e/22/be0e22d789d501d17243287be4feddd5.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1479834267494-E8CG0JA9Y5NFWBBG8VUG/new-posters-and-photos-for-martin-scorseses-silence-with-andrew-garfield-and-liam-neeson8)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://dropthespotlight.com/wp-content/uploads/2020/07/americansniper.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2017/04/burgos_godfather.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/M/MV5BMTQ2MjA4MTcwOF5BMl5BanBnXkFtZTgwNTI4OTI1MDE@._V1_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://d2g43ubxtnccwi.cloudfront.net/38535_1_medium.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2020/07/Maddox-Finkel_goodfellas.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/no586-my-men-in-black-minimal-movie-poster-chungkong-art.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/6338952/r/il/9e1507/498230067/il_570xN.498230067_gck6.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2013/07/oceansbg.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://ghostof82.files.wordpress.com/2019/04/brart1-2.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/36067604/r/il/708a5d/4222062408/il_fullxfull.4222062408_6ln7.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://4.bp.blogspot.com/-PzapsKL4swA/WouoWCY2JNI/AAAAAAABhBc/kFvP73BGowUmR06YriiMeN6X1VS8kOcSwCLcBGAs/s1600/Jonathan-Burton-Citizen-Kane-Movie-Poster-2018.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://s3.amazonaws.com/criterion-production/films/5a8da68d2d614bc2841f3133a9d1e16d/bPuyXlWNoUAC4cbWbL1Z08Q48keUKn_large.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://64.media.tumblr.com/db54df42e1eb289a2b76b05c36f8cb3b/tumblr_o6zhnbunuB1v3gtoxo1_1280.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/M/MV5BNmI1ODdjODctMDlmMC00ZWViLWI5MzYtYzRhNDdjYmM3MzFjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/81au9XotE0L._AC_SY741_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2012/12/dasbootbg.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2019/11/javier_gladiator.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2017/09/davies_untouchables.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://www.themoviedb.org/t/p/original/1wZUB08igw8iLUgF1r4T6aJD65b.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/51BBib1XCeL._AC_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://ae01.alicdn.com/kf/HTB1E5Q1BRmWBuNkSndVq6AsApXad/The-Bourne-Identity-Classic-Movie-Home-Decorative-Painting-White-Kraft-Paper-Poster-42X30cm.jpg_640x640.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/51XBhvSdQDL._AC_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/6849517/r/il/72e31d/374197411/il_570xN.374197411_iovz.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://m.media-amazon.com/images/I/618xrzOFyEL._AC_SY879_.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2016/11/mumford_lordofrings2.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.etsystatic.com/14140434/r/il/de4702/1526222179/il_fullxfull.1526222179_kl3i.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Category</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
